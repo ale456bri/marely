@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MARE BEAUTY</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div id="loader" class="loader-bg">
+    <div class="loader"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-logo">Marely Murillo</div>
+    <ul class="navbar-links">
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+      <li><a href="#tips" class="nav-link">Tips</a></li>
+      <li><a href="#galeria" class="nav-link">Galería</a></li>
+    </ul>
+    <button id="darkModeToggle" class="darkmode-btn" aria-label="Modo oscuro">🌙</button>
+  </nav>
+
+  <button class="carrito-btn" id="carritoBtn">
+    🛒 <span class="carrito-cantidad" id="carritoCantidad">0</span>
+  </button>
+  <div class="carrito-modal" id="carritoModal">
+    <button class="carrito-cerrar" id="cerrarCarrito">&times;</button>
+    <h4>Carrito de compras</h4>
+    <ul class="carrito-lista" id="carritoLista"></ul>
+    <div class="carrito-vacio" id="carritoVacio">El carrito está vacío.</div>
+  </div>
+
+  <button id="btnArriba" class="btn-arriba" title="Ir arriba">↑</button>
+
+  <div id="modalProducto" class="modal-producto">
+    <div class="modal-contenido">
+      <span class="modal-cerrar" id="cerrarModalProducto">&times;</span>
+      <img id="modalImg" src="" alt="" />
+      <h3 id="modalNombre"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <section class="banner-top banner-anim" id="inicio">
+    <img src="imagenes/M11.jpg" alt="Gloss Serum Hidratante">
+    <div class="banner-contenido anim-fadein">
+      <h1>Maquillaje con estilo</h1>
+      <p>#LOOKAUTENTICO</p>
+      <span class="subinfo">Marely Murillo</span>
+      <a href="#catalogo" class="btn">VER MÁS</a>
+    </div>
+  </section>
+
+  <main class="catalogo" id="catalogo">
+    <h2 class="seccion-titulo anim-slideup">Colección Destacada</h2>
+    <div class="grid-productos">
+      <div class="producto anim-zoom" data-nombre="Base Perfecta" data-img="imagenes/M1.jpg" data-desc="Base líquida de alta cobertura y acabado natural."><img src="imagenes/M1.jpg" alt=""><h3>Base Perfecta</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Sombras" data-img="imagenes/M2.jpg" data-desc="Paleta de sombras en tonos cálidos y terrosos."><img src="imagenes/M2.jpg" alt=""><h3>Sombras Terracota</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Labial Intenso" data-img="imagenes/M3.jpg" data-desc="Labial mate de larga duración en tono vino."><img src="imagenes/M3.jpg" alt=""><h3>Labial Vino Intenso</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="blush Natural" data-img="imagenes/M4.jpg" data-desc="Rubor en polvo para un acabado saludable."><img src="imagenes/M4.jpg" alt=""><h3>Rubor Natural</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Iluminador Gold" data-img="imagenes/M5.jpg" data-desc="Iluminador dorado para resaltar tus facciones."><img src="imagenes/M5.jpg" alt=""><h3>Iluminador Oro</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Delineador " data-img="imagenes/M6.jpg" data-desc="Delineador líquido de alta precisión."><img src="imagenes/M6.jpg" alt=""><h3>Delineador Preciso</h3><button class="add-cart-btn">Agregar</button></div>
+    </div>
+
+    <h2 class="seccion-titulo anim-slideup">Tendencias</h2>
+    <div class="grid-productos">
+      <div class="producto anim-zoom" data-nombre="Polvo Translucido" data-img="imagenes/M7.jpg" data-desc="Polvo compacto para sellar tu maquillaje."><img src="imagenes/M7.jpg" alt=""><h3>Polvo Suave</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Brochas MM" data-img="imagenes/M8.jpg" data-desc="Set de brochas profesionales para todo tipo de maquillaje."><img src="imagenes/M8.jpg" alt=""><h3>Brochas Pro</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Corrector Hidratante" data-img="imagenes/M9.jpg" data-desc="Corrector líquido de alta cobertura."><img src="imagenes/M9.jpg" alt=""><h3>Corrector Fluido</h3><button class="add-cart-btn">Agregar</button></div>
+      <div class="producto anim-zoom" data-nombre="Rímel Volumen" data-img="imagenes/M10.jpg" data-desc="Rímel para pestañas con máximo volumen."><img src="imagenes/M10.jpg" alt=""><h3>Rímel Volumen</h3><button class="add-cart-btn">Agregar</button></div>
+    </div>
+  </main>
+
+  <section class="tips-maquillaje" id="tips">
+    <h2 class="anim-slideup">Tips de Maquillaje</h2>
+    <ul>
+      <li>Hidrata tu piel antes de aplicar cualquier producto.</li>
+      <li>Utiliza primer para mayor duración.</li>
+      <li>Lava tu cara con jabon para tu tipo de piel.</li>
+      <li>No olvides sellar tu maquillaje con polvo traslúcido.</li>
+      <li>Desmaquíllate siempre antes de dormir.</li>
+    </ul>
+  </section>
+
+  <section class="galeria-looks" id="galeria">
+    <h2 class="anim-slideup">Galería de Looks</h2>
+    <div class="galeria">
+      <img class="anim-zoom" src="imagenes/look1.jpg" alt="Look 1" style="width:180px;height:180px;object-fit:cover;">
+      <img class="anim-zoom" src="imagenes/look2.jpg" alt="Look 2" style="width:180px;height:180px;object-fit:cover;">
+      <img class="anim-zoom" src="imagenes/look3.jpg" alt="Look 3" style="width:180px;height:180px;object-fit:cover;">
+      <img class="anim-zoom" src="imagenes/look4.jpg" alt="Look 4" style="width:180px;height:180px;object-fit:cover;">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>MARE BEAUTY - Marely Murillo</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </p>
+    <p>#BRILLACONESTILO</p>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(() => document.getElementById('loader').style.display = 'none', 400);
+      }, 900);
+    });
+
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    const btnArriba = document.getElementById('btnArriba');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        btnArriba.classList.add('visible');
+      } else {
+        btnArriba.classList.remove('visible');
+      }
+    });
+    btnArriba.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const carritoBtn = document.getElementById('carritoBtn');
+    const carritoModal = document.getElementById('carritoModal');
+    const cerrarCarrito = document.getElementById('cerrarCarrito');
+    const carritoCantidad = document.getElementById('carritoCantidad');
+    const carritoLista = document.getElementById('carritoLista');
+    const carritoVacio = document.getElementById('carritoVacio');
+    let carrito = {};
+
+    function animarCarrito() {
+      carritoCantidad.classList.add('animar');
+      setTimeout(() => carritoCantidad.classList.remove('animar'), 400);
+    }
+
+    function actualizarCarrito() {
+      const items = Object.entries(carrito);
+      carritoCantidad.textContent = items.reduce((acc, [_, v]) => acc + v, 0);
+      carritoLista.innerHTML = '';
+      if (items.length === 0) {
+        carritoVacio.style.display = 'block';
+      } else {
+        carritoVacio.style.display = 'none';
+        items.forEach(([nombre, cantidad]) => {
+          const li = document.createElement('li');
+          li.innerHTML = `${nombre} <span>x${cantidad}</span>`;
+          carritoLista.appendChild(li);
+        });
+      }
+    }
+
+    document.querySelectorAll('.add-cart-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const nombre = this.parentElement.getAttribute('data-nombre');
+        carrito[nombre] = (carrito[nombre] || 0) + 1;
+        actualizarCarrito();
+        animarCarrito();
+      });
+    });
+
+    carritoBtn.addEventListener('click', () => {
+      carritoModal.classList.toggle('active');
+    });
+
+    cerrarCarrito.addEventListener('click', () => {
+      carritoModal.classList.remove('active');
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!carritoModal.contains(e.target) && !carritoBtn.contains(e.target)) {
+        carritoModal.classList.remove('active');
+      }
+    });
+
+    actualizarCarrito();
+
+    const animFadeIn = document.querySelectorAll('.anim-fadein');
+    const animSlideUp = document.querySelectorAll('.anim-slideup');
+    const animZoom = document.querySelectorAll('.anim-zoom');
+
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight - 50
+      );
+    }
+
+    function animateOnScroll() {
+      animFadeIn.forEach(el => {
+        if (isInViewport(el)) el.classList.add('visible');
+      });
+      animSlideUp.forEach(el => {
+        if (isInViewport(el)) el.classList.add('visible');
+      });
+      animZoom.forEach(el => {
+        if (isInViewport(el)) el.classList.add('visible');
+      });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    const modalProducto = document.getElementById('modalProducto');
+    const cerrarModalProducto = document.getElementById('cerrarModalProducto');
+    const modalImg = document.getElementById('modalImg');
+    const modalNombre = document.getElementById('modalNombre');
+    const modalDesc = document.getElementById('modalDesc');
+
+    document.querySelectorAll('.producto').forEach(prod => {
+      prod.addEventListener('click', function(e) {
+        if (e.target.classList.contains('add-cart-btn')) return;
+        modalImg.src = this.getAttribute('data-img');
+        modalNombre.textContent = this.getAttribute('data-nombre');
+        modalDesc.textContent = this.getAttribute('data-desc');
+        modalProducto.classList.add('show');
+      });
+    });
+    cerrarModalProducto.addEventListener('click', () => {
+      modalProducto.classList.remove('show');
+    });
+    modalProducto.addEventListener('click', (e) => {
+      if (e.target === modalProducto) modalProducto.classList.remove('show');
+    });
+
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('darkmode');
+      if(document.body.classList.contains('darkmode')) {
+        darkModeToggle.textContent = '☀️';
+      } else {
+        darkModeToggle.textContent = '🌙';
+      }
+    });
+
+    window.addEventListener('load', () => {
+      document.querySelector('.banner-anim').classList.add('banner-anim-show');
+    });
+
+    const sections = document.querySelectorAll('section, main');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function activarNav() {
+      let index = sections.length;
+      while(--index && window.scrollY + 80 < sections[index].offsetTop) {}
+      navLinks.forEach((link) => link.classList.remove('active'));
+      if(navLinks[index]) navLinks[index].classList.add('active');
+    }
+    window.addEventListener('scroll', activarNav);
+    window.addEventListener('load', activarNav);
+  </script>
+</body>
+</html>

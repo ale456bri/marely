@@ -1,0 +1,425 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333333;
+}
+
+h1, h2, h3 {
+  color: #09b9ff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff6fa;
+  box-shadow: 0 2px 12px rgba(0, 162, 255, 0.06);
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 64px;
+  transition: background 0.3s;
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1ee9e9;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #1f656e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus {
+  background: #1e8ee9;
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 2%;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+body {
+  padding-top: 64px;
+}
+
+.banner-top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-top img {
+  width: 100%;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.banner-contenido {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0.25);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  min-width: 260px;
+}
+
+.banner-contenido h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.banner-contenido p {
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+
+.banner-contenido span {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.banner-contenido .btn {
+  background: #1ee9d8;
+  color: white;
+  padding: 10px 28px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  margin-top: 10px;
+  display: inline-block;
+}
+.banner-contenido .btn:hover {
+  background: #14a8ad;
+}
+
+.catalogo {
+  padding: 50px 5%;
+  background: #ffffff;
+}
+
+.seccion-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+.producto {
+  text-align: center;
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1rem;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.3s;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.producto.visible {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.producto img {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.producto h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #1f6e63;
+}
+
+.producto:hover {
+  transform: translateY(-7px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(30, 233, 172, 0.1);
+}
+
+.add-cart-btn {
+  background: #1ee9d8;
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+.add-cart-btn:hover {
+  background: #14a8ad;
+}
+
+/* Tips de Maquillaje */
+.tips-maquillaje {
+  background: #f6fffb;
+  padding: 40px 5% 30px 5%;
+  margin-top: 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 12px rgba(0, 255, 213, 0.06);
+}
+.tips-maquillaje h2 {
+  color: #18bcc2;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.tips-maquillaje ul {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  color: #1f6e67;
+  padding-left: 0;
+}
+.tips-maquillaje li {
+  margin-bottom: 10px;
+}
+
+.galeria-looks {
+  background: #f6ffff;
+  padding: 40px 5% 30px 5%;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(55, 0, 255, 0.06);
+}
+.galeria-looks h2 {
+  color: #18c2ab;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.galeria img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(110,31,62,0.10);
+  border: 2px solid #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: scale(0.92);
+}
+.galeria img.visible {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.galeria img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(24, 188, 194, 0.18);
+}
+
+.footer {
+  background: #1f6e6e;
+  color: #fff;
+  text-align: center;
+  padding: 32px 10px 24px 10px;
+  margin-top: 50px;
+  border-radius: 16px 16px 0 0;
+}
+.footer a {
+  color: #e3efff;
+  text-decoration: underline;
+  margin: 0 6px;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* Carrito */
+.carrito-btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #1ee9df;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1003;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s;
+}
+.carrito-btn:hover {
+  background: #14ad8c;
+}
+.carrito-cantidad {
+  background: #fff;
+  color: #1ee9b6;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.carrito-modal {
+  display: none;
+  position: fixed;
+  top: 4.5rem;
+  right: 1.2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  padding: 1.2rem 1.5rem;
+  min-width: 260px;
+  z-index: 1004;
+  animation: fadeIn 0.4s;
+}
+.carrito-modal.active {
+  display: block;
+}
+.carrito-modal h4 {
+  margin: 0 0 1rem 0;
+  color: #1ee9d8;
+  font-size: 1.1rem;
+}
+.carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.carrito-lista li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrito-vacio {
+  color: #888888;
+  font-size: 0.98rem;
+  margin-bottom: 1rem;
+}
+.carrito-cerrar {
+  background: none;
+  border: none;
+  color: #1ee9e9;
+  font-size: 1.1rem;
+  cursor: pointer;
+  float: right;
+  margin-top: -0.7rem;
+  margin-right: -0.7rem;
+}
+
+/* Animaciones */
+.anim-fadein {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+}
+.anim-fadein.visible {
+  opacity: 1;
+}
+
+.anim-slideup {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.anim-slideup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-zoom {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.anim-zoom.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .banner-contenido {
+    padding: 1rem 0.7rem;
+    min-width: 0;
+    left: 10px;
+    right: 10px;
+  }
+  .catalogo, .tips-maquillaje, .galeria-looks {
+    padding: 0 0.3rem;
+  }
+  .carrito-modal {
+    right: 0.3rem;
+    min-width: 180px;
+    padding: 1rem 0.7rem;
+  }
+}
